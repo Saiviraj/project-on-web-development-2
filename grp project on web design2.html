@@ -1,0 +1,321 @@
+
+<body>
+    <p>  multiple games developing and creating websites beautifully</p><br><br>
+    <style>
+     p{
+        color:red;
+     }
+    </style>
+    </body>
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+    canvas {
+        border:1px solid green;
+        background-color :green;
+        padding: 100px;
+    }
+    </style>
+    </head>
+    <body onload="startGame()">
+    <script>
+    
+    var myGamePiece;
+    var myObstacle;
+    
+    function startGame() {
+        myGamePiece = new component(30, 30, "red", 10, 130);
+        myObstacle  = new component(10, 200, "red", 300, 130);    
+        myGameArea.start();
+    }
+    var myGameArea = {
+        canvas : document.createElement("canvas"),
+        start : function() {
+            this.canvas.width = 480;
+            this.canvas.height = 370;
+            this.context = this.canvas.getContext("2d");
+            document.body.insertBefore(this.canvas, document.body.childNodes[5]);
+            this.interval = setInterval(updateGameArea, 30);
+        },
+        clear : function() {
+            this.context.clearRect(1, 1, this.canvas.width, this.canvas.height);
+        }
+    }
+    this.voice = function(){
+    
+    }
+    
+    function component(width, height, color, x, y) {
+        this.width = width;
+        this.height = height;
+        this.speedX = 5;
+        this.speedY = 1;    
+        this.x = x;
+        this.y = y;    
+        this.update = function() {
+            ctx = myGameArea.context;
+            ctx.fillStyle = color= blur;
+            ctx.fillRect(this.x, this.y, this.width, this.height);
+        }
+        this.newPos = function() {
+            this.x += this.speedX;
+            this.y += this.speedY;        
+        }    
+    }
+    
+    
+    function updateGameArea() {
+        myGameArea.clear(5);
+        myObstacle.update(9);
+        myGamePiece.newPos(8);    
+        myGamePiece.update();
+    }
+    
+    function moveup() {
+        myGamePiece.speedY = -1; 
+    }
+    
+    function movedown() {
+        myGamePiece.speedY = 1; 
+    }
+    
+    function moveleft() {
+        myGamePiece.speedX = -1; 
+    }
+    
+    function moveright() {
+        myGamePiece.speedX = 1; 
+    }
+    
+    function clearmove() {
+        myGamePiece.speedX = 0; 
+        myGamePiece.speedY = 1; 
+    }
+    function stop()
+    {
+       myGamePiece.speedX = -1;
+       myGamePiece.speedY = -1; 
+    }
+    function click()
+    {
+        myGamePiece.speedX= -1;
+        myGamePiece.speedY = -1;
+        stop=click();
+    
+    }
+    
+    function restart()
+    {
+        myGamePiece.setInterval=10;
+        myGamePiece.speedY = -1;
+        myGamePiece.speedX = 1;
+    }
+    </script>
+    <div style="text-align:center;width:680px;">
+      <button onmousedown="moveup()" onmouseup="clearmove()" ontouchstart="moveup()">UP</button><br><br>
+      <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+      <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
+      <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">DOWN</button>
+      <button  onmousedown="stop()" onmouseup="clearmove()" ontouchstart="stop()">stop</button>
+      <button onmousedown="click()" onmouseover="stop()" ontouchstart="stop()">click</button>
+      <button onplay="restart()" onmouseover="clearmove()"onplay = "restart()">restart</button>
+    </div>
+    <p>Now there is an obstacle in our gaming area, but still nothing happens when the black square hits it.</p>
+</body><br><br>
+</html>
+
+</script>
+<body>
+    
+</style><br><br><br>
+<body>
+    <h1>diomand</h1>                     
+    <style>
+        h1{
+          color:red;
+          background-color:red;
+          border-radius: 0vmax; 
+          border-style: dashed;
+           height: 80px;
+          width:100px;
+          font-weight: bold;
+          padding: 80px;
+          margin:80px;
+          transform:rotate(120deg);
+        }
+    
+        
+    </style>
+    <body></body><br>
+        <h1> diamond 1</h1>
+    <style>
+    h1{
+        border-style: dashed;
+    image-orientation: flip;
+      font-display: auto;
+      image-orientation: flip;
+     color:red;
+      background-color: blue; 
+      width: 100px; 
+      height: 70px;
+      font-weight: bold;
+      border-width: 20px;
+      box-sizing: inherit;
+      padding: 80px;
+      margin:80px;
+      font-style: normal;
+      transform:rotate(540deg); 
+    }
+    
+    </style>
+
+<body><br>
+<h1>   </h1>
+</body><br>
+<h1> diamond 2</h1>
+<style>
+    h1{
+display:flex;
+border-style: dashed;
+color:blanchedalmond;
+background-color:red;
+border-radius: 0vmax; 
+border-style: dashed;
+ height: 80px;
+width:100px;
+font-weight: bold;
+padding: 80px;
+margin:80px;
+transform:rotate(120deg);
+text-shadow: green;
+text-align: center;
+    }
+    .contaainer{
+        display: flex;
+        background-color: blue;
+        color:red;
+        height: 100px;
+    }
+
+#box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    background-color: green;
+    color:ivory;
+    transition-property: all;
+    transition-duration: 8s;
+
+}
+
+#box:hover {
+    display: flex;
+    background-color: green;
+    height: 600px;
+    width: 700px;
+    border-radius: 90%;
+    font-size: 45px; 
+    transform: rotatez(540deg);
+     
+}
+
+#square:hover{
+  display: flex;
+  height: 100px;
+  width:70px;
+  color:green;
+  background:red;
+  align-items:center;
+  justify-content:top;
+}
+#triangle:hover {
+    display: flex;
+    background-color: green;
+    height: 500px;
+    width: 700px;
+    border-radius: 90%;
+    font-size: 45px; 
+    transform: rotatez(540deg);
+   
+}
+
+
+</style><br><br>
+
+<body>
+<div class="container" id=1>
+<div class ="container" id =2>
+<div class = "container"id =3></div>
+    <div id="box">
+    <div id ="triangle">
+    <div id ="square"></div>
+       transmition
+    </div>
+</div>
+</body>
+
+</html>
+<html>
+<body> 
+
+<br><br>
+
+<style>
+
+#container{
+background-color: blue;
+border-radius: 30%;
+height: 50px;
+width: 50px;
+padding: 40px;
+margin:40px;
+border-color: blue;
+position: absolute;
+border:solid;
+}
+#animate{
+    width: 60px;
+    height: 60px;
+    color:green;
+    position: absolute;
+    background-color: blue;
+    
+}
+
+</style>
+
+<body>
+    <p><button onclick="mymove()"> value = "click me"</button></p>
+    <div id ="container">
+    <div id ="animate">
+    
+    </div>
+    </div>
+    <script>
+        function mymove(){
+            let id = null;
+            const Element = document.getElementById("animate");
+            let pos =0;
+        clearInterval(id);
+       id =  setInterval(frame,6);
+    
+ function frame()
+ {
+  
+ 
+    if(pos==350)
+    {
+      clearInterval(id);
+  
+    }else{
+       pos++;
+       Element.style.Top = pos + "px";
+       Element.style.Left= Pos + "px"; 
+    }
+}}
+    </script>
+</body>
